@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BK Predictor</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>🎯 BK Predictor</h1>
+      <span id="status" class="status">connecting…</span>
+    </header>
+
+    <section class="cards">
+      <div class="card"><span class="label">Saldo</span><span id="balance" class="value">—</span></div>
+      <div class="card"><span class="label">Bet Sekarang</span><span id="currentBet" class="value">—</span></div>
+      <div class="card"><span class="label">Prediksi Berikutnya</span><span id="nextBetType" class="value big">—</span></div>
+      <div class="card"><span class="label">Periode Berikutnya</span><span id="nextIssue" class="value small">—</span></div>
+      <div class="card"><span class="label">Countdown</span><span id="countdown" class="value">—</span></div>
+      <div class="card"><span class="label">Streak</span><span id="streak" class="value">—</span></div>
+      <div class="card"><span class="label">Win / Loss</span><span id="wl" class="value">—</span></div>
+      <div class="card"><span class="label">Update Terakhir</span><span id="lastUpdate" class="value small">—</span></div>
+    </section>
+
+    <h2>Riwayat 20 Ronde Terakhir</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Waktu</th><th>Periode</th><th>Prediksi</th>
+            <th>Bet</th><th>Angka</th><th>Tipe</th><th>Hasil</th>
+          </tr>
+        </thead>
+        <tbody id="history"></tbody>
+      </table>
+    </div>
+
+    <footer>
+      <button id="resetBtn">Reset State</button>
+      <span id="errorMsg" class="error"></span>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
